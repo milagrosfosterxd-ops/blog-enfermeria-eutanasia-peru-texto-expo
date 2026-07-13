@@ -154,7 +154,7 @@ nav a.activo {
 }
 
 /* =====================================================
-   HERO
+   HERO (Fondo oscuro, letras blancas)
 ===================================================== */
 
 .hero {
@@ -164,116 +164,74 @@ nav a.activo {
     align-items: center;
     overflow: hidden;
     padding: 150px 0 100px;
-    background: linear-gradient(135deg, #ffffff 0%, #eef7fb 45%, #dff4f8 100%);
+    background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 50%, #2d5a7a 100%);
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.1fr .9fr;
-    gap: 70px;
-    align-items: center;
+.hero * {
+    color: #ffffff;
 }
 
-.hero-texto {
-    position: relative;
-    z-index: 2;
-}
-
-.badge {
-    display: inline-block;
-    background: #d9f3ff;
-    color: var(--primario);
-    padding: 10px 18px;
-    border-radius: 50px;
-    font-size: .9rem;
-    font-weight: 700;
-    margin-bottom: 22px;
+.hero .badge {
+    background: rgba(255,255,255,.15);
+    color: #93c5fd;
 }
 
 .hero h1 {
-    font-size: 3.4rem;
-    line-height: 1.15;
-    color: var(--primario);
-    margin-bottom: 25px;
-    font-weight: 900;
+    color: #ffffff;
 }
 
 .hero-descripcion {
-    font-size: 1.15rem;
-    color: var(--gris);
-    margin-bottom: 35px;
+    color: #93c5fd !important;
 }
 
 .hero-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 22px;
-    box-shadow: var(--sombra);
-    margin-bottom: 35px;
-    border-left: 6px solid var(--secundario);
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+    border-left-color: #60a5fa;
 }
 
 .hero-card h3 {
-    color: var(--primario);
-    margin-bottom: 18px;
-    font-size: 1.25rem;
-}
-
-.hero-card ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 20px;
-    margin-bottom: 15px;
+    color: #ffffff;
 }
 
 .hero-card ul li {
-    font-size: .95rem;
-    color: var(--texto);
+    color: #e2e8f0;
 }
 
 .hero-card ul li::before {
-    content: "▸ ";
-    color: var(--secundario);
+    color: #60a5fa;
 }
 
 .hero-card p {
-    margin-top: 8px;
+    color: #e2e8f0;
 }
 
 .boton-principal {
-    display: inline-block;
-    background: var(--primario);
-    color: #fff;
-    padding: 16px 40px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.05rem;
-    transition: var(--transicion);
-    box-shadow: 0 10px 30px rgba(0,59,113,.25);
+    background: #ffffff;
+    color: #0a1628;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
 .boton-principal:hover {
     background: var(--secundario);
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0,166,206,.3);
-}
-
-.hero-imagen img {
-    border-radius: 25px;
-    box-shadow: var(--sombra);
-    transition: .4s;
-}
-
-.hero-imagen img:hover {
-    transform: scale(1.03);
+    color: #ffffff;
 }
 
 /* =====================================================
-   SECCIONES GENERALES
+   SECCIONES GENERALES (Fondo claro, letras negras)
 ===================================================== */
 
 .section {
     padding: 110px 0;
+    background: var(--blanco);
+}
+
+.section * {
+    color: var(--texto);
+}
+
+.section.articulo:nth-child(even) {
+    background: #F8FAFC;
 }
 
 .titulo-seccion {
@@ -404,6 +362,7 @@ nav a.activo {
 .contenido-articulo p {
     margin-bottom: 18px;
     text-align: justify;
+    color: var(--texto);
 }
 
 .contenido-articulo blockquote {
@@ -417,26 +376,39 @@ nav a.activo {
 }
 
 /* =====================================================
-   CONCLUSIÓN
+   CONCLUSIÓN (Fondo oscuro, letras blancas)
 ===================================================== */
 
 .conclusion {
-    background: linear-gradient(135deg, #F8FCFF, #EAF7FC);
+    background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 50%, #2d5a7a 100%);
+}
+
+.conclusion * {
+    color: #ffffff;
+}
+
+.conclusion .titulo-seccion span {
+    background: rgba(255,255,255,.15);
+    color: #93c5fd;
+}
+
+.conclusion .titulo-seccion h2 {
+    color: #ffffff;
 }
 
 .contenido-conclusion {
     max-width: 950px;
     margin: auto;
-    background: #fff;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
     padding: 45px;
     border-radius: 25px;
-    box-shadow: var(--sombra);
 }
 
 .contenido-conclusion p {
     text-align: justify;
     margin-bottom: 22px;
-    color: var(--texto);
+    color: #e2e8f0;
     font-size: 1.05rem;
 }
 
@@ -475,6 +447,10 @@ nav a.activo {
 
 .referencia em {
     color: var(--primario);
+}
+
+.referencia p {
+    color: var(--texto);
 }
 
 /* =====================================================
@@ -693,4 +669,4 @@ nav a.activo {
         height: 60px;
         font-size: 1.5rem;
     }
-}
+   }     
