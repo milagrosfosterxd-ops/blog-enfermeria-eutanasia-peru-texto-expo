@@ -61,7 +61,7 @@ ul {
 }
 
 /* =====================================================
-   HEADER
+   HEADER (MENÚ AZUL ELÉCTRICO)
 ===================================================== */
 
 .header {
@@ -70,9 +70,8 @@ ul {
     left: 0;
     width: 100%;
     z-index: 999;
-    background: rgba(255,255,255,.95);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 3px 18px rgba(0,0,0,.06);
+    background: #003B71;
+    box-shadow: 0 3px 18px rgba(0,0,0,.15);
     transition: .35s ease;
 }
 
@@ -80,7 +79,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 0;
+    padding: 12px 0;
 }
 
 .logo {
@@ -90,9 +89,12 @@ ul {
 }
 
 .logo img {
-    width: 58px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    background: white;
+    padding: 4px;
 }
 
 .logo-texto {
@@ -103,11 +105,11 @@ ul {
 .universidad {
     font-size: 1rem;
     font-weight: 800;
-    color: var(--primario);
+    color: #ffffff;
 }
 
 .modalidad {
-    color: var(--secundario);
+    color: #93c5fd;
     font-size: .82rem;
     font-weight: 600;
 }
@@ -118,29 +120,32 @@ ul {
 
 nav ul {
     display: flex;
-    gap: 28px;
+    gap: 20px;
 }
 
 nav a {
-    color: var(--texto);
+    color: #e2e8f0;
     font-weight: 600;
+    font-size: .85rem;
     transition: var(--transicion);
     position: relative;
+    padding: 4px 0;
 }
 
 nav a:hover {
-    color: var(--primario);
+    color: #ffffff;
 }
 
 nav a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -4px;
     width: 0;
     height: 3px;
-    background: var(--secundario);
+    background: #60a5fa;
     transition: .3s;
+    border-radius: 3px;
 }
 
 nav a:hover::after,
@@ -149,7 +154,7 @@ nav a.activo::after {
 }
 
 nav a.activo {
-    color: var(--primario);
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -163,7 +168,7 @@ nav a.activo {
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 150px 0 100px;
+    padding: 130px 0 80px;
     background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 50%, #2d5a7a 100%);
 }
 
@@ -172,7 +177,7 @@ nav a.activo {
 }
 
 .hero .badge {
-    background: rgba(255,255,255,.15);
+    background: rgba(255,255,255,.12);
     color: #93c5fd;
 }
 
@@ -213,8 +218,92 @@ nav a.activo {
 }
 
 .boton-principal:hover {
-    background: var(--secundario);
+    background: #00A6CE;
     color: #ffffff;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-texto {
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: .85rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.hero-descripcion {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hero-card {
+    padding: 28px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border-left: 6px solid;
+}
+
+.hero-card h3 {
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+}
+
+.hero-card ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin-bottom: 14px;
+}
+
+.hero-card ul li {
+    font-size: .92rem;
+}
+
+.hero-card ul li::before {
+    content: "▸ ";
+}
+
+.hero-card p {
+    margin-top: 6px;
+}
+
+.boton-principal {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: var(--transicion);
+}
+
+.hero-imagen img {
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    transition: .4s;
+    width: 100%;
+}
+
+.hero-imagen img:hover {
+    transform: scale(1.02);
 }
 
 /* =====================================================
@@ -222,7 +311,7 @@ nav a.activo {
 ===================================================== */
 
 .section {
-    padding: 110px 0;
+    padding: 90px 0;
     background: var(--blanco);
 }
 
@@ -236,22 +325,23 @@ nav a.activo {
 
 .titulo-seccion {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 .titulo-seccion span {
     display: inline-block;
-    padding: 8px 18px;
+    padding: 6px 16px;
     border-radius: 30px;
     background: #E0F2FE;
-    color: var(--secundario);
+    color: #00A6CE;
     font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    font-size: .85rem;
+    margin-bottom: 12px;
 }
 
 .titulo-seccion h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--primario);
     font-weight: 800;
     line-height: 1.2;
@@ -264,20 +354,19 @@ nav a.activo {
 .contenido-introduccion {
     display: grid;
     grid-template-columns: 1.2fr .8fr;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
 }
 
 .contenido-introduccion p {
-    margin-bottom: 20px;
-    color: var(--texto);
+    margin-bottom: 18px;
     text-align: justify;
 }
 
 .contenido-introduccion blockquote {
-    margin-top: 35px;
-    padding: 28px;
-    border-left: 6px solid var(--secundario);
+    margin-top: 30px;
+    padding: 24px;
+    border-left: 6px solid #00A6CE;
     background: #F1F9FD;
     border-radius: 15px;
     font-style: italic;
@@ -295,34 +384,36 @@ nav a.activo {
 
 .imagen img {
     width: 100%;
-    border-radius: 25px;
+    border-radius: 20px;
     box-shadow: var(--sombra);
     transition: .4s;
 }
 
 .imagen img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .info-box {
     position: absolute;
-    bottom: -30px;
-    right: -20px;
-    width: 280px;
+    bottom: -25px;
+    right: -15px;
+    width: 260px;
     background: #fff;
-    border-radius: 18px;
-    padding: 25px;
+    border-radius: 16px;
+    padding: 22px;
     box-shadow: var(--sombra);
 }
 
 .info-box h3 {
     color: var(--primario);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    font-size: 1rem;
 }
 
 .info-box li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: var(--gris);
+    font-size: .9rem;
 }
 
 /* =====================================================
@@ -338,38 +429,37 @@ nav a.activo {
 }
 
 .numero {
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primario), var(--secundario));
+    background: linear-gradient(135deg, #003B71, #00A6CE);
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 800;
 }
 
 .contenido-articulo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
 }
 
 .contenido-articulo p {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     text-align: justify;
-    color: var(--texto);
 }
 
 .contenido-articulo blockquote {
-    margin-top: 25px;
+    margin-top: 20px;
     background: #EEF8FC;
-    border-left: 5px solid var(--acento);
-    padding: 22px;
+    border-left: 5px solid #16C79A;
+    padding: 20px;
     border-radius: 15px;
     font-style: italic;
     color: var(--primario);
@@ -388,7 +478,7 @@ nav a.activo {
 }
 
 .conclusion .titulo-seccion span {
-    background: rgba(255,255,255,.15);
+    background: rgba(255,255,255,.12);
     color: #93c5fd;
 }
 
@@ -399,17 +489,17 @@ nav a.activo {
 .contenido-conclusion {
     max-width: 950px;
     margin: auto;
-    background: rgba(255,255,255,.08);
+    background: rgba(255,255,255,.06);
     backdrop-filter: blur(10px);
-    padding: 45px;
-    border-radius: 25px;
+    padding: 40px;
+    border-radius: 20px;
 }
 
 .contenido-conclusion p {
     text-align: justify;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     color: #e2e8f0;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
 }
 
 /* =====================================================
@@ -427,10 +517,10 @@ nav a.activo {
 
 .referencia {
     background: #F8FAFC;
-    border-left: 5px solid var(--secundario);
-    border-radius: 16px;
-    padding: 22px;
-    margin-bottom: 20px;
+    border-left: 5px solid #00A6CE;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 18px;
     transition: .35s;
 }
 
@@ -440,13 +530,13 @@ nav a.activo {
 }
 
 .referencia a {
-    color: var(--primario);
+    color: #003B71;
     word-break: break-word;
     font-weight: 600;
 }
 
 .referencia em {
-    color: var(--primario);
+    color: #003B71;
 }
 
 .referencia p {
@@ -458,20 +548,21 @@ nav a.activo {
 ===================================================== */
 
 .footer {
-    background: var(--primario);
+    background: #003B71;
     color: #fff;
-    padding: 70px 0 35px;
+    padding: 60px 0 30px;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 30px;
 }
 
 .footer h3 {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: #fff;
+    font-size: 1.05rem;
 }
 
 .footer p {
@@ -512,13 +603,13 @@ nav a.activo {
     position: fixed;
     right: 25px;
     bottom: 25px;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     border: none;
     border-radius: 50%;
-    background: var(--primario);
+    background: #003B71;
     color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -533,8 +624,8 @@ nav a.activo {
 }
 
 .btn-top:hover {
-    background: var(--secundario);
-    transform: translateY(-5px);
+    background: #00A6CE;
+    transform: translateY(-4px);
 }
 
 /* =====================================================
@@ -542,7 +633,7 @@ nav a.activo {
 ===================================================== */
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -550,12 +641,12 @@ nav a.activo {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--secundario);
+    background: #00A6CE;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--primario);
+    background: #003B71;
 }
 
 /* =====================================================
@@ -564,21 +655,24 @@ nav a.activo {
 
 @media (max-width: 1024px) {
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
     .contenido-introduccion,
     .contenido-articulo {
-        gap: 40px;
+        gap: 35px;
+    }
+    nav ul {
+        gap: 14px;
     }
 }
 
 @media (max-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
     }
     .hero h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     .contenido-introduccion {
         grid-template-columns: 1fr;
@@ -594,13 +688,23 @@ nav a.activo {
         bottom: 0;
         right: 0;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 18px;
     }
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
     nav ul {
-        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav a {
+        font-size: .78rem;
+    }
+    .header .container {
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 8px;
     }
 }
 
@@ -609,64 +713,61 @@ nav a.activo {
         font-size: 1.8rem;
     }
     .hero {
-        padding: 120px 0 60px;
+        padding: 110px 0 50px;
     }
     .section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
     .titulo-seccion h2 {
-        font-size: 1.8rem;
-    }
-    .header .container {
-        flex-direction: column;
-        gap: 12px;
-        padding: 12px 0;
+        font-size: 1.6rem;
     }
     .logo img {
-        width: 45px;
+        width: 40px;
+        height: 40px;
     }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
+    .universidad {
+        font-size: .85rem;
     }
-    nav a {
-        font-size: .8rem;
+    .modalidad {
+        font-size: .7rem;
     }
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
     .contenido-conclusion {
-        padding: 25px;
+        padding: 20px;
     }
     .hero-card ul {
         flex-direction: column;
         gap: 2px;
     }
     .btn-top {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         font-size: 18px;
-        right: 15px;
-        bottom: 15px;
+        right: 12px;
+        bottom: 12px;
     }
 }
 
 @media (max-width: 400px) {
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .badge {
         font-size: .7rem;
     }
     .boton-principal {
-        padding: 12px 25px;
-        font-size: .9rem;
+        padding: 10px 20px;
+        font-size: .85rem;
     }
     .numero {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
     }
-   }     
+    nav a {
+        font-size: .7rem;
+    }
+}
